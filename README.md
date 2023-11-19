@@ -5,21 +5,18 @@
 
 I created a Simple Weather website/app using Node.js, Express, EJS and we’ll be also using some dependencies such as AXIOS, Body-Parser and Nodemon.
 The website is going to have two main features which are Searching and displaying Weather information.
-The data for the information will come from openweatherapi.org  , but feel free to use whatever API you wish.
+The data for the information will come from OpenWeatherMap API  , but feel free to use whatever API you wish.
 some good suggestions:
 <ul>
-  <li>Bing News API</li>
-  <li>Newscatcher API</li>
-  <li>Google News API</li>
+  <li> Tomorrow.io API</li>
+  <li> Stormglass API</li>
+  <li> AccuWeather API</li>
 </ul>
 <h3>Initialize the New Project</h3>
-To initialise a new Node.js project all you have to do is to create a new project folder “news-app” or anything you call it and then run the Command line in the same directory. Once you do that to initialise a new project simply put the following command:
+To initialise a new Node.js project all you have to do is to create a new project folder “weather-app” or anything you call it and then run the Command line in the same directory. Once you do that to initialise a new project simply put the following command:
 <h4 >npm init -y</h4>
 <h3>Project Structure</h3>
 ![Screenshot 2023-11-19 104328](https://github.com/DARSHIL-LALORIYA/weather-web-app/assets/145353449/d6bcaf12-d0e2-44c4-8a9d-5a25ba52dfc6)
-
-
-
 <h3>Install Dependencies</h3>
 <ul>
   <li>Express</li>

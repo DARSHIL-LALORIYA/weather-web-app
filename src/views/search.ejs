@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="main-container">
+      <div class="wrapper">
+        <div class="field">
+          <form action="/" method="post">
+            <input type="text" placeholder="Enter City Name" required>
+            <input type="submit" value="⌕">
+          </form>
+          <div class="line"></div>
+        </div>
+        <% if (info != null) { %> 
+        <div class="detail-box">
+          <h5 class="card-title">Weather in <%= info.name %>, <%= info.sys.country %></h5>
+            <p class="text-muted">Lat: <%= info.coord.lat %>, Lon: <%= info.coord.lon %></p>
+            <img class="float-right" src="http://openweathermap.org/img/wn/<%= info.weather[0].icon %>@2x.png" alt="icon">
+            <p class="display-1"><%= info.main.temp%><sup>o</sup>C</p>
+            <span class="text-muted-2">Feels like <%= info.main.feels_like %><sup>o</sup>C</span>
+            <h5 class="text-muted-3"><%= info.weather[0].description %></h5>
+        </div>
+  
+        <div class="detail">
+          <ul>
+            <li>
+                <i class='bx bx-paper-plane' ></i><%- info.main.pressure %> mb  
+            </li>
+            <li>
+              <i class='bx bx-wind'></i><%- info.wind.speed %>m/sec
+            </li>
+            <li>
+              <i class='bx bx-cloud' ></i><%- info.clouds.all %> %
+            </li>
+            <li>
+              <i class='bx bx-low-vision' ></i><%- info.visibility/1000 %>km
+            </li>
+            <li>
+              <i class='bx bxs-droplet-half' ></i><%- info.main.humidity %>%
+            </li>
+          </ul>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
